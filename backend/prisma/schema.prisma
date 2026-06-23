@@ -1,9 +1,65 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
+model Conversation {
+  id          String        @id @default(uuid())
+  title       String?
+  tokenCount  Int           @default(0)
+  createdAt   DateTime      @default(now())
+  toolCalls   ToolCallLog[]
+}
+
+model GuardrailRule {
+  id        String   @id @default(uuid())
+  toolName  String
+  ruleType  RuleType
+  condition String?
+  isActive  Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+}
+
+model ToolCallLog {
+  id             String           @id @default(uuid())
+  conversationId String
+  conversation   Conversation     @relation(fields: [conversationId], references: [id])
+  toolName       String
+  input          Json
+  status         CallStatus
+  blockedReason  String?
+  createdAt      DateTime         @default(now())
+  approval       ApprovalRequest?
+}
+
+model ApprovalRequest {
+  id            String         @id @default(uuid())
+  toolCallLogId String         @unique
+  toolCallLog   ToolCallLog    @relation(fields: [toolCallLogId], references: [id])
+  status        ApprovalStatus @default(PENDING)
+  requestedAt   DateTime       @default(now())
+  resolvedAt    DateTime?
+}
+
+enum RuleType {
+  BLOCK
+  APPROVAL
+  INPUT_VALIDATION
+  TOKEN_BUDGET
+}
+
+enum CallStatus {
+  ALLOWED
+  BLOCKED
+  PENDING_APPROVAL
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  DENIED
+}
