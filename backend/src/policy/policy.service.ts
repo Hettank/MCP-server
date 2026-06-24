@@ -6,7 +6,7 @@ import { PrismaService } from "src/prisma/prisma.service";
 export class PolicyService {
   private cachedRules: GuardrailRule[] = [];
   private lastFetch = 0;
-  private readonly CACHE_TTL = 5000; // 5 seconds
+  private readonly CACHE_TTL = 5000;
 
   constructor(private readonly prisma: PrismaService) {}
 
