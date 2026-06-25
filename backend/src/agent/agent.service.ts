@@ -59,6 +59,11 @@ export class AgentService {
         input,
         status,
         blockedReason: decision.reason ?? null,
+        ...(decision.requiresApproval && {
+          approval: {
+            create: {}
+          }
+        }),
       },
     });
   }
@@ -89,7 +94,7 @@ export class AgentService {
       // call Groq API
       const response = await this.groq.chat.completions.create({
         model,
-        max_tokens: 1024,
+        max_tokens: 512,
         tools,
         messages,
       });
@@ -185,7 +190,7 @@ export class AgentService {
 
   async chat(dto: ChatDto) {
     // get or create conversation
-    const convo = await this.getOrCreateConversation(dto.conversationId);
+    const convo = await this.getOrCreateConversation(dto.conversationId ?? undefined);
 
     // build message history
     const messages: ChatCompletionMessageParam[] = [{ role: "user", content: dto.message }];

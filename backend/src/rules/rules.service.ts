@@ -19,9 +19,6 @@ export class RulesService {
 
   async findAll() {
     return this.prisma.guardrailRule.findMany({
-      where: {
-        isActive: true,
-      },
       orderBy: {
         updatedAt: "desc",
       },

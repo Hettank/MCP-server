@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "id": "note_1782385076293_l2mot",
+    "title": "Shopping List for 25 June",
+    "content": "Milk, eggs, chicken",
+    "createdAt": "2026-06-25T10:57:56.293Z",
+    "updatedAt": "2026-06-25T10:57:57.065Z"
+  },
+  {
+    "id": "note_1782385080953_92e2z",
+    "title": "Shopping List for 26 June",
+    "content": "Bread, apples, grapes, oranges, pears",
+    "createdAt": "2026-06-25T10:58:00.953Z",
+    "updatedAt": "2026-06-25T10:58:12.836Z"
+  },
+  {
+    "id": "note_1782385107376_1s95h",
+    "title": "Meat shopping list for 26 June",
+    "content": "Pork chops, beef, lamb, sausages, bacon",
+    "createdAt": "2026-06-25T10:58:27.376Z",
+    "updatedAt": "2026-06-25T10:58:52.259Z"
+  },
+  {
+    "id": "note_1782385151379_mj1xx",
+    "title": "Shopping list for 27 June",
+    "content": "Carrots, peas, potatoes, broccoli, bananas",
+    "createdAt": "2026-06-25T10:59:11.379Z",
+    "updatedAt": "2026-06-25T10:59:33.120Z"
+  },
+  {
+    "id": "note_1782385187915_25gmr",
+    "title": "Shopping List",
+    "content": "Milk, Eggs, Bread",
+    "createdAt": "2026-06-25T10:59:47.915Z",
+    "updatedAt": "2026-06-25T10:59:59.806Z"
+  },
+  {
+    "id": "note_1782385223598_oehnp",
+    "title": "Shopping",
+    "content": "",
+    "createdAt": "2026-06-25T11:00:23.598Z",
+    "updatedAt": "2026-06-25T11:00:23.598Z"
+  },
+  {
+    "id": "note_1782385714649_qyi45",
+    "title": "Project demo v2",
+    "content": "The project demo is on going.",
+    "createdAt": "2026-06-25T11:08:34.649Z",
+    "updatedAt": "2026-06-25T11:08:55.882Z"
+  },
+  {
+    "id": "note_1782385768581_zzqnc",
+    "title": "Project v2 note 2",
+    "content": "Third note for project demo v2",
+    "createdAt": "2026-06-25T11:09:28.581Z",
+    "updatedAt": "2026-06-25T11:10:09.437Z"
+  },
+  {
+    "id": "note_1782386223674_woyok",
+    "title": "Shopping List",
+    "content": "Milk, Eggs, Bread",
+    "createdAt": "2026-06-25T11:17:03.674Z",
+    "updatedAt": "2026-06-25T11:17:03.675Z"
+  },
+  {
+    "id": "note_1782388517458_ms14p",
+    "title": "Table Tennis Daily Plan",
+    "content": "Plan to play table tennis every day, including warm-ups, drills, and schedule.",
+    "createdAt": "2026-06-25T11:55:17.458Z",
+    "updatedAt": "2026-06-25T11:55:17.469Z"
+  }
+]
